@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的书架--个人中心</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        border: 0;
+    }
+    
+    .head {
+        width: 1200px;
+        height: 100px;
+        margin: 0px auto;
+        /*border-radius: 15px;*/
+    }
+    
+    .head div {
+        margin-top: 10px;
+        float: left;
+    }
+    
+    .head div:nth-child(1) {
+        width: 950px;
+    }
+    
+    .head div:nth-child(2) {
+        width: 250px;
+    }
+    
+    .head li {
+        color: black;
+        list-style: none;
+        float: left;
+        margin: 5px 10px 0px 0px;
+    }
+    
+    .head li:hover {
+        color: brown;
+    }
+    
+    .center {
+        width: 1200px;
+        height: 700px;
+        margin: 10px auto;
+        border: 1px solid rgb(234, 234, 234)
+    }
+    
+    .center div {
+        float: left;
+    }
+    
+    .center a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .user {
+        width: 230px;
+        height: 700px;
+        background: #f3f3f3;
+    }
+    
+    .user img {
+        width: 200px;
+        height: 200px;
+        margin: 10px 0px 0px 20px;
+    }
+    
+    .user h3,
+    .user p {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .user p:hover {
+        background: #eaeaea;
+    }
+    
+    .book {
+        width: 900px;
+        height: 700px;
+        margin-left: 20px;
+    }
+    
+    .book div:nth-child(1) {
+        width: 900px;
+        height: 30px;
+        border-bottom: 1px solid #4b4b4b;
+        margin-top: 30px;
+    }
+    
+    .book div:nth-child(1) h3 {
+        margin: 0px;
+    }
+    
+    .book img {
+        width: 150px;
+        height: 150px;
+    }
+</style>
+
+<body>
+
+    <div class="head">
+        <div>
+            <a href="./index.html">
+                <li>首页</li>
+            </a>
+            <li>|</li>
+            <a href="#">
+                <li>导航</li>
+            </a>
+            <li>|</li>
+            <a href="./MyBookshelf.html">
+                <li>个人中心</li>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <li id="login">欢迎回来:　蛮吉 </li>
+            </a>
+            <li>|</li>
+            <a href="#">
+                <li id="esc">退出 </li>
+            </a>
+        </div>
+        <div>
+            <a href="./index.html"><img src="./images/logo4.gif" alt=""></a>
+        </div>
+
+
+    </div>
+
+    <div class="center">
+        <div class="user">
+            <h3>用户信息</h3>
+            <img src="./images/child/8e8f501d6de8c947f9e1ed3ca70c2b38.jpg" alt="">
+            <p id="username">用户： 蛮吉 </p>
+            <p><a href="#">我的书架</a></p>
+            <p><a href="">我的余额</a></p>
+            <p><a href="">我看过的</a></p>
+        </div>
+        <div class="book">
+            <div>
+                <h3>我的书架</h3>
+            </div>
+            <div>
+                <p>暂时没有收藏的书哦！</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="bottom">
+
+
+    </div>
+</body>
+<script>
+    window.onload = () => {
+
+        var login = document.getElementById('login');
+        var esc = document.getElementById('esc');
+        var username = document.getElementById('username');
+
+        esc.onclick = () => {
+            login.innerHTML = '请登录';
+            username.innerHTML = '用户:';
+        }
+
+        login.onclick = () => {
+            login.innerHTML = '欢迎回来:　蛮吉';
+            username.innerHTML = '用户 : 蛮吉';
+
+        }
+
+
+    }
+</script>
+
+</html>
